@@ -1,0 +1,142 @@
+* {
+  margin: 0px;
+}
+
+nav, footer {
+  margin: 0px;
+  padding: 0px;
+  height: 10vh;
+}
+
+body {
+  background-color: #f8f9fa;
+  color: #212529;
+  margin: 0px;
+  padding: 0px;
+  font-family: "Helvetica", "sans-serif";
+}
+
+nav h3 {
+  padding: 20px;
+  text-align: end;
+}
+
+#root {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+
+.block {
+  margin-bottom: 40px;
+}
+
+.card {
+  width: 120px;
+  height: 180px;
+  border-radius: 20px;
+}
+
+.card:hover {
+  animation: scaleUp 1s forwards ease;
+}
+
+@keyframes scaleUp {
+  from {
+    width: 120px;
+    height: 180px;
+  }
+  to {
+    width: 144px;
+    height: 216px;
+  }
+}
+.color-text {
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  margin: 10px;
+}
+
+footer div {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+@media (min-width: 420px) and (max-width: 800px) {
+  nav {
+    font-size: 26px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    width: 180px;
+    height: 270px;
+  }
+
+  .color-text {
+    font-size: 18px;
+  }
+
+  @keyframes scaleUp {
+    from {
+      width: 180px;
+      height: 270px;
+    }
+    to {
+      width: 204px;
+      height: 306px;
+    }
+  }
+}
+@media (min-width: 800px) {
+  nav {
+    font-size: 28px;
+  }
+
+  .row {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .col {
+    margin-left: 20px;
+    margin-right: 20px;
+  }
+
+  .card {
+    width: 240px;
+    height: 360px;
+  }
+
+  @keyframes scaleUp {
+    from {
+      width: 240px;
+      height: 360px;
+    }
+    to {
+      width: 264px;
+      height: 396px;
+    }
+  }
+  .color-text {
+    font-size: 20px;
+  }
+}
+
+/*# sourceMappingURL=style.css.map */
