@@ -24,8 +24,18 @@ nav h3 {
 #root {
   margin-top: 50px;
   margin-bottom: 50px;
+}
+
+.row {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .block {
@@ -33,30 +43,20 @@ nav h3 {
 }
 
 .card {
-  width: 120px;
-  height: 180px;
+  width: 168px;
+  height: 252px;
   border-radius: 20px;
+  transition: transform 1s;
 }
 
 .card:hover {
-  animation: scaleUp 1s forwards ease;
+  transform: scale(1.1);
 }
 
-@keyframes scaleUp {
-  from {
-    width: 120px;
-    height: 180px;
-  }
-  to {
-    width: 144px;
-    height: 216px;
-  }
-}
 .color-text {
-  font-size: 16px;
   font-weight: bold;
   text-align: center;
-  margin: 10px;
+  margin: 15px;
 }
 
 footer div {
@@ -65,41 +65,24 @@ footer div {
   justify-content: space-between;
 }
 
+@media (max-width: 420px) {
+  .card {
+    width: 120px;
+    height: 180px;
+    border-radius: 20px;
+  }
+
+  .color-text {
+    font-size: 16px;
+  }
+}
 @media (min-width: 420px) and (max-width: 800px) {
   nav {
     font-size: 26px;
   }
 
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .col {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .card {
-    width: 180px;
-    height: 270px;
-  }
-
-  .color-text {
+  .color-text, footer {
     font-size: 18px;
-  }
-
-  @keyframes scaleUp {
-    from {
-      width: 180px;
-      height: 270px;
-    }
-    to {
-      width: 204px;
-      height: 306px;
-    }
   }
 }
 @media (min-width: 800px) {
@@ -107,34 +90,7 @@ footer div {
     font-size: 28px;
   }
 
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .col {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .card {
-    width: 240px;
-    height: 360px;
-  }
-
-  @keyframes scaleUp {
-    from {
-      width: 240px;
-      height: 360px;
-    }
-    to {
-      width: 264px;
-      height: 396px;
-    }
-  }
-  .color-text {
+  .color-text, footer {
     font-size: 20px;
   }
 }

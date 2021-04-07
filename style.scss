@@ -21,9 +21,6 @@ $font-stack: "Helvetica","sans-serif";
   height: 10vh;
 }
 
-
-
-
 body {
   background-color: #f8f9fa;
   color: #212529;
@@ -46,8 +43,18 @@ nav {
 #root {
   margin-top: 50px;
   margin-bottom: 50px;
+ 
+}
+.row {
   display: flex;
   justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.col {
+  margin-left: 20px;
+  margin-right: 20px;
 }
 
 .block {
@@ -55,30 +62,22 @@ nav {
 }
 
 .card {
-  width: $cardWidthMobile;
-  height: $cardHeightMobile;
+  width: $cardWidthMobile * 1.4;
+  height: $cardHeightMobile * 1.4;
   border-radius: 20px;
+  transition: transform 1s;
 }
+
 
 .card:hover {
-  animation: scaleUp 1s forwards ease;
+  transform: scale(1.1);  
 }
 
-@keyframes scaleUp {
-  from {
-    width: $cardWidthMobile;
-    height: $cardHeightMobile;
-  } to {
-    width: $cardWidthMobile * 1.2;
-    height: $cardHeightMobile * 1.2;
-  };
-}
 
 .color-text {
-  font-size: $mobileFont;
   font-weight: bold;
   text-align: center;
-  margin: 10px;
+  margin: 15px;
 }
 
 footer {
@@ -89,42 +88,27 @@ footer {
   }
 }
 
+@media (max-width: 420px) {
+
+  .card {
+    width: $cardWidthMobile;
+    height: $cardHeightMobile;
+    border-radius: 20px;
+  }
+
+  .color-text {
+    font-size: $mobileFont;
+  }
+}
+
 @media (min-width: 420px) and (max-width: 800px) {
   nav {
     font-size: $ipadHeading;
   }
 
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .col {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .card {
-    width: $cardWidthMobile * 1.5;
-    height: $cardHeightMobile * 1.5;
-  }
-
-  .color-text {
+  .color-text, footer {
     font-size: $ipadFont;
   }
-
-  @keyframes scaleUp {
-    from {
-      width: $cardWidthMobile * 1.5;
-      height: $cardHeightMobile * 1.5;
-    } to {
-      width: $cardWidthMobile * 1.7;
-      height: $cardHeightMobile * 1.7;
-    };
-  }
-
 }
 
 @media (min-width: 800px) {
@@ -133,34 +117,7 @@ footer {
     font-size: $largeHeading;
   }
 
-  .row {
-    display: flex;
-    justify-content: center;
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
-
-  .col {
-    margin-left: 20px;
-    margin-right: 20px;
-  }
-
-  .card {
-    width: $cardWidthMobile * 2;
-    height: $cardHeightMobile * 2;
-  }
-
-  @keyframes scaleUp {
-    from {
-      width: $cardWidthMobile * 2;
-      height: $cardHeightMobile * 2;
-    } to {
-      width: $cardWidthMobile * 2.2;
-      height: $cardHeightMobile * 2.2;
-    };
-  }
-
-  .color-text {
+  .color-text, footer {
     font-size: $largeFont;
   }
 }
