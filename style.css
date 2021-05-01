@@ -2,7 +2,8 @@
   margin: 0px;
 }
 
-nav, footer {
+nav,
+footer {
   margin: 0px;
   padding: 0px;
   height: 10vh;
@@ -47,6 +48,9 @@ nav h3 {
   height: 252px;
   border-radius: 20px;
   transition: transform 1s;
+  box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
 }
 
 .card:hover {
@@ -55,8 +59,9 @@ nav h3 {
 
 .color-text {
   font-weight: bold;
+  font-style: italic;
   text-align: center;
-  margin: 15px;
+  margin: 20px;
 }
 
 footer div {
@@ -81,7 +86,8 @@ footer div {
     font-size: 26px;
   }
 
-  .color-text, footer {
+  .color-text,
+footer {
     font-size: 18px;
   }
 }
@@ -90,7 +96,8 @@ footer div {
     font-size: 28px;
   }
 
-  .color-text, footer {
+  .color-text,
+footer {
     font-size: 20px;
   }
 }
