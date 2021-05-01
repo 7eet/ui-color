@@ -9,7 +9,7 @@ $largeHeading: 28px;
 $cardWidthMobile: 120px;
 $cardHeightMobile: 180px;
 
-$font-stack: "Helvetica","sans-serif";
+$font-stack: "Helvetica", "sans-serif";
 
 * {
   margin: 0px;
@@ -29,7 +29,8 @@ body {
   font-family: $font-stack;
 }
 
-nav, footer {
+nav,
+footer {
   @extend %headerNfooter;
 }
 
@@ -43,7 +44,6 @@ nav {
 #root {
   margin-top: 50px;
   margin-bottom: 50px;
- 
 }
 .row {
   display: flex;
@@ -66,18 +66,20 @@ nav {
   height: $cardHeightMobile * 1.4;
   border-radius: 20px;
   transition: transform 1s;
+  box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
 }
-
 
 .card:hover {
-  transform: scale(1.1);  
+  transform: scale(1.1);
 }
-
 
 .color-text {
   font-weight: bold;
+  font-style: italic;
   text-align: center;
-  margin: 15px;
+  margin: 20px;
 }
 
 footer {
@@ -89,7 +91,6 @@ footer {
 }
 
 @media (max-width: 420px) {
-
   .card {
     width: $cardWidthMobile;
     height: $cardHeightMobile;
@@ -106,18 +107,19 @@ footer {
     font-size: $ipadHeading;
   }
 
-  .color-text, footer {
+  .color-text,
+  footer {
     font-size: $ipadFont;
   }
 }
 
 @media (min-width: 800px) {
-  
   nav {
     font-size: $largeHeading;
   }
 
-  .color-text, footer {
+  .color-text,
+  footer {
     font-size: $largeFont;
   }
 }
