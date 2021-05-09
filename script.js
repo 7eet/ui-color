@@ -1,8 +1,8 @@
 var myData = JSON.parse(colors);
 
 var root = document.getElementById("root");
-var row = document.createElement("div");
-row.className="row";
+var grid = document.createElement("div");
+grid.className="grid";
 
 for (let colr of myData) {
   let hexCode = colr["hexCode"];
@@ -15,16 +15,15 @@ for (let colr of myData) {
   col.appendChild(card);
   col.appendChild(text);
 
-  row.appendChild(col);
-  // console.log(colr["hexCode"])
+  grid.appendChild(col);
 }
 
-root.appendChild(row);
+root.appendChild(grid);
 
 
 function addColumn() {
   const col = document.createElement("div");
-  col.className = "block col";
+  col.classList.add("grid-item");
   return col;
 }
 
