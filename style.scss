@@ -22,11 +22,16 @@ $font-stack: "Helvetica", "sans-serif";
 }
 
 body {
-  background-color: #f8f9fa;
+  background-color: #212529;
   color: #212529;
   margin: 0px;
-  padding: 0px;
+  padding: 20px;
   font-family: $font-stack;
+}
+
+.container {
+  background-color: #f8f9fa;
+  border-radius: 20px;
 }
 
 nav,
@@ -42,23 +47,19 @@ nav {
 }
 
 #root {
-  margin-top: 50px;
   margin-bottom: 50px;
 }
-.row {
-  display: flex;
+
+.grid {
+  display: grid;
+  grid-template-columns: 150px 150px;
   justify-content: center;
-  flex-direction: row;
-  flex-wrap: wrap;
+  grid-gap: 20px;
 }
 
-.col {
-  margin-left: 20px;
-  margin-right: 20px;
-}
-
-.block {
-  margin-bottom: 40px;
+.grid-item {
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .card {
@@ -107,6 +108,28 @@ footer {
     font-size: $ipadHeading;
   }
 
+  body {
+    padding: 40px;
+  }
+
+  .card {
+    width: $cardWidthMobile;
+    height: $cardHeightMobile;
+    border-radius: 20px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    grid-gap: 40px;
+    justify-content: center;
+  }
+
+  .grid-item {
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+
   .color-text,
   footer {
     font-size: $ipadFont;
@@ -116,6 +139,22 @@ footer {
 @media (min-width: 800px) {
   nav {
     font-size: $largeHeading;
+  }
+
+  body {
+    padding: 60px;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 200px 200px 200px 200px;
+    grid-gap: 60px;
+    justify-content: center;
+  }
+
+  .grid-item {
+    padding: 20px;
+    margin-bottom: 20px;
   }
 
   .color-text,
