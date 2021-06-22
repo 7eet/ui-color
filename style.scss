@@ -6,8 +6,8 @@ $mobileHeading: 22px;
 $ipadHeading: 26px;
 $largeHeading: 28px;
 
-$cardWidthMobile: 120px;
-$cardHeightMobile: 180px;
+$cardWidthMobile: 100px;
+$cardHeightMobile: 140px;
 
 $font-stack: "Helvetica", "sans-serif";
 
@@ -25,7 +25,7 @@ body {
   background-color: #212529;
   color: #212529;
   margin: 0px;
-  padding: 0px 20px 10px 20px;
+  padding: 0px 10px 10px 10px;
   font-family: $font-stack;
 }
 
@@ -49,14 +49,14 @@ nav {
 }
 
 #root {
-  margin-bottom: 50px;
+  margin: 50px 0px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 150px 150px;
-  justify-content: center;
-  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
+  // grid-gap: 20px;
 }
 
 .grid-item {
@@ -69,9 +69,9 @@ nav {
   height: $cardHeightMobile * 1.4;
   border-radius: 20px;
   transition: transform 1s;
-  box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
-  -webkit-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
 }
 
 .card:hover {
@@ -82,7 +82,7 @@ nav {
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 footer {
@@ -111,7 +111,7 @@ footer {
   }
 
   body {
-    padding: 0px 40px 20px 40px;
+    padding: 0px 20px 20px 20px;
   }
 
   .card {
@@ -144,7 +144,7 @@ footer {
   }
 
   body {
-    padding: 0px 60px 40px 60px;
+    padding: 0px 30px 30px 30px;
   }
 
   .grid {

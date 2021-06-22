@@ -13,7 +13,7 @@ body {
   background-color: #212529;
   color: #212529;
   margin: 0px;
-  padding: 0px 20px 10px 20px;
+  padding: 0px 10px 10px 10px;
   font-family: "Helvetica", "sans-serif";
 }
 
@@ -30,14 +30,13 @@ nav h3 {
 }
 
 #root {
-  margin-bottom: 50px;
+  margin: 50px 0px;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: 150px 150px;
-  justify-content: center;
-  grid-gap: 10px;
+  grid-template-columns: auto auto;
+  justify-content: space-around;
 }
 
 .grid-item {
@@ -46,13 +45,13 @@ nav h3 {
 }
 
 .card {
-  width: 168px;
-  height: 252px;
+  width: 140px;
+  height: 196px;
   border-radius: 20px;
   transition: transform 1s;
-  box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
-  -webkit-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
-  -moz-box-shadow: 10px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -webkit-box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
+  -moz-box-shadow: 8px 8px 21px -5px rgba(0, 0, 0, 0.38);
 }
 
 .card:hover {
@@ -63,7 +62,7 @@ nav h3 {
   font-weight: bold;
   font-style: italic;
   text-align: center;
-  margin: 20px;
+  margin: 20px 0px;
 }
 
 footer div {
@@ -74,8 +73,8 @@ footer div {
 
 @media (max-width: 650px) {
   .card {
-    width: 120px;
-    height: 180px;
+    width: 100px;
+    height: 140px;
     border-radius: 20px;
   }
 
@@ -89,12 +88,12 @@ footer div {
   }
 
   body {
-    padding: 0px 40px 20px 40px;
+    padding: 0px 20px 20px 20px;
   }
 
   .card {
-    width: 120px;
-    height: 180px;
+    width: 100px;
+    height: 140px;
     border-radius: 20px;
   }
 
@@ -121,7 +120,7 @@ footer {
   }
 
   body {
-    padding: 0px 60px 40px 60px;
+    padding: 0px 30px 30px 30px;
   }
 
   .grid {
